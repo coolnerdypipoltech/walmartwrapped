@@ -82,15 +82,16 @@ function App() {
           <div className="video-container">
             <h3>Video Encontrado</h3>
             <div className="video-card">
-              <p><strong>Link del Video:</strong></p>
-              <a 
+              <p><strong>Descargar video:</strong></p>
+              <div
                 href={video} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="video-link"
+                onClick={() => {window.open("https://drive.google.com/u/1/uc?id=" + store.fileId + "&export=download", "_blank");}}
               >
-                {video.link}
-              </a>
+                Haz clic aquí para descargar el video
+              </div>
               {video ? (
                 <div className="video-player">
                   <iframe
